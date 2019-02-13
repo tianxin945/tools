@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class test {
-    @RequestMapping("/login")
-    public void index(){
-
+    @RequestMapping("/rest/login")
+    public String index(){
+        return "login";
+    }
+    @RequestMapping("/logout")
+    public String index2(){
+        return "logout";
     }
 }

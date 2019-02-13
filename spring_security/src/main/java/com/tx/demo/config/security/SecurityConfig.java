@@ -1,6 +1,5 @@
 package com.tx.demo.config.security;
 
-import com.tx.demo.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -9,14 +8,17 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-/**
- * @Author tianxin
- * @Date 2019/1/29
- * @Description:
- */
+//*
+// * @Author tianxin
+// * @Date 2019/1/29
+// * @Description:
+
+
 @Configurable
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+
 
     // 自定义用户认证策略
     @Override
@@ -40,19 +42,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 //  为请求的url添加权限
                 .authorizeRequests()
+                .antMatchers("/rest/**").permitAll()
                 //  所有的请求必须通过授权
                 .anyRequest().authenticated()
                 .and()
                 //  配置登录页面
-                .formLogin()
-                .defaultSuccessUrl("/index.html")
+                .formLogin().loginPage("/rest/login")
                 .failureUrl("/login?error")
                 .permitAll()
                 .and()
                 //  指定登出的url
                 .logout()
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/index")
+                .logoutUrl("/rest/logout")
+                .logoutSuccessUrl("/logout").permitAll()
                 .and()
                 .httpBasic();
 
