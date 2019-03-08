@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * @Description: 缓存类
  */
 public class demo01 {
-    public static Map<String, String> map = new HashMap<>();
+    private static Map<String, String> map = new HashMap<>();
     private static ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
 
     public static void main(String[] args) {
