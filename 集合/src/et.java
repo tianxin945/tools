@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  */
 public class et {
     @Test
-    public void fun1() {
+    public void fun12() {
         List<User> list = new ArrayList<>();
         list.add(new User("tianxin", 18,11));
         list.add(new User("tianxin", 17,12));
