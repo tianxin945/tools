@@ -19,7 +19,6 @@ public class MyUserDetailsService implements UserDetailsService {
     //由于是演示这里就不再创建service层了，直接注入UserRepository。
     //private UserRepository userRepository;
 
-    @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         //查询账号是否存在，是就返回一个UserDetails的对象，否就抛出异常！
         User user = new User("tianxin","1234");

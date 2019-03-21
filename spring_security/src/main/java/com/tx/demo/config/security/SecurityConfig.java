@@ -1,12 +1,15 @@
 package com.tx.demo.config.security;
 
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import java.security.AuthProvider;
 
 //*
 // * @Author tianxin
@@ -19,15 +22,19 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
+    @Override
+    protected AuthenticationManager authenticationManager() throws Exception {
+        return super.authenticationManager();
+    }
 
     // 自定义用户认证策略
-    @Override
+  /*  @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         super.configure(auth);
         auth
                 .userDetailsService(new MyUserDetailsService())
                 .passwordEncoder(new BCryptPasswordEncoder());
-    }
+    }*/
 
     @Override
     public void configure(WebSecurity web) throws Exception {
