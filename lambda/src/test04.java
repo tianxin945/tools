@@ -16,7 +16,7 @@ public class test04 {
         Date date = new Date(System.currentTimeMillis());
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
-        setEndTime(4,calendar);
+        setEndTime(1,calendar);
         Timestamp ts = new Timestamp(calendar.getTime().getTime());
         System.out.println(ts);
     }
@@ -24,6 +24,7 @@ public class test04 {
         switch (type) {
             case 1:
                 calendar.add(Calendar.MONTH, 1);
+                return calendar;
             case 2:
                 calendar.add(Calendar.MONTH, 3);
                 return calendar;
@@ -31,7 +32,7 @@ public class test04 {
                 calendar.add(Calendar.MONTH, 6);
                 return calendar;
             case 4:
-                calendar.add(Calendar.MONTH, 12);
+                calendar.add(Calendar.YEAR, 1);
                 return calendar;
         }
         return calendar;
