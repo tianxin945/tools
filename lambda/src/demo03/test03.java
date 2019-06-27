@@ -9,12 +9,13 @@ import org.junit.Test;
  */
 public class test03 {
     @Test
-    public void fun1(){
-        Integer s = op(1,2,(x,y) -> x+y);
+    public void fun1() {
+        Integer s = op(1, 2, (x, y) -> x + y);
         System.out.println(s);
     }
-    public Integer op (Integer t1,Integer t2,MyFunction2<Integer,Integer> myFunction2){
 
-        return myFunction2.sour(t1,t2);
+    public Integer op(Integer t1, Integer t2, MyFunction2<Integer, Integer> myFunction2) {
+
+        return myFunction2.sour(t1, t2);
     }
 }

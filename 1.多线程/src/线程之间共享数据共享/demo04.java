@@ -12,14 +12,16 @@ public class demo04 {
     }
 
 }
-class myRunnable1 implements Runnable{
+
+class myRunnable1 implements Runnable {
 
     @Override
     public void run() {
 
     }
 }
-class myRunnable2 implements Runnable{
+
+class myRunnable2 implements Runnable {
 
     @Override
     public void run() {

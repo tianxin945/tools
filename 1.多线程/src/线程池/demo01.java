@@ -1,8 +1,5 @@
 package 线程池;
 
-import org.omg.CORBA.TIMEOUT;
-
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -20,8 +17,7 @@ public class demo01 {
             public void run() {
                 System.out.println("111111");
             }
-        },1,2,TimeUnit.SECONDS);
-
+        }, 1, 2, TimeUnit.SECONDS);
 
 
     }

@@ -23,11 +23,11 @@ public class test01 {
         list.add(new Employee("TIANXIN4", 11));
         list.add(new Employee("TIANXIN5", 10));
 
-        Collections.sort(list,(x,y) -> {
-            if(x.getAge() == y.getAge()){
+        Collections.sort(list, (x, y) -> {
+            if (x.getAge() == y.getAge()) {
                 return x.getName().compareTo(y.getName());
-            }else {
-                return Integer.compare(x.getAge(),y.getAge());
+            } else {
+                return Integer.compare(x.getAge(), y.getAge());
             }
         });
 

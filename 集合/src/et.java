@@ -17,9 +17,9 @@ public class et {
     @Test
     public void fun12() {
         List<User> list = new ArrayList<>();
-        list.add(new User("tianxin", 18,11));
-        list.add(new User("tianxin", 17,12));
-        list.add(new User("tianxin", 16,11));
+        list.add(new User("tianxin", 18, 11));
+        list.add(new User("tianxin", 17, 12));
+        list.add(new User("tianxin", 16, 11));
 
 
         for (User user : list.stream().filter(distinctByKey(b -> b.getName())).collect(Collectors.toList())) {

@@ -16,7 +16,7 @@ public class test01 {
         int a = 18;
         int b = 23;
         try {
-            String[] sss = new String[] { "python", "C:\\Users\\86132\\Desktop\\tools\\调用python\\src\\demo01\\demo.py", String.valueOf(a), String.valueOf(b) };
+            String[] sss = new String[]{"python", "C:\\Users\\86132\\Desktop\\tools\\调用python\\src\\demo01\\demo.py", String.valueOf(a), String.valueOf(b)};
             Process proc = Runtime.getRuntime().exec(sss);// 执行py文件
 
             BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));
@@ -32,7 +32,6 @@ public class test01 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
 
 
     }

@@ -12,6 +12,7 @@ public class demo03 {
         new Thread(sell).start();
         new Thread(sell).start();
     }
+
     static class sell implements Runnable {
         private int total = 100;
 

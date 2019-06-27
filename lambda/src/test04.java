@@ -12,14 +12,15 @@ import java.util.Date;
  */
 public class test04 {
     @Test
-    public void fun1(){
+    public void fun1() {
         Date date = new Date(System.currentTimeMillis());
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
-        setEndTime(1,calendar);
+        setEndTime(1, calendar);
         Timestamp ts = new Timestamp(calendar.getTime().getTime());
         System.out.println(ts);
     }
+
     public Calendar setEndTime(int type, Calendar calendar) {
         switch (type) {
             case 1:

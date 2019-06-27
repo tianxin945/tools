@@ -16,8 +16,9 @@ public class demo01 {
 
     public static void main(String[] args) {
     }
+
     public static String getValue(String key) {
-        String value ;
+        String value;
         readWriteLock.readLock().lock();
         try {
             value = map.get(key);
