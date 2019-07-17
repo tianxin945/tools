@@ -1,6 +1,8 @@
 package JUC;
 
 import java.util.concurrent.atomic.AtomicIntegerArray;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author:tx
@@ -18,5 +20,7 @@ public class Array {
         System.out.println(b);
         System.out.println(arr);
 
+        Lock lock = new ReentrantLock();
+        lock.lock();
     }
 }
