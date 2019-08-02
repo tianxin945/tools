@@ -1,4 +1,4 @@
-package 空中网4k月薪挑选大四实习生的线程题;
+package 空中网线程题;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

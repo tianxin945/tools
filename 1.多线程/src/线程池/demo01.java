@@ -19,6 +19,14 @@ public class demo01 {
             }
         }, 1, 2, TimeUnit.SECONDS);
 
+        new Thread().start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }).start();
 
     }
 }

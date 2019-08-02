@@ -1,4 +1,4 @@
-package JUC.锁;
+package JUC锁.锁;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

@@ -22,7 +22,7 @@ public class CountDownLatchTest1 {
                         System.out.println(Thread.currentThread().getName() + "正在等待中");
                         start.await();
 
-                        System.out.println("test");
+                        System.out.println("demo");
 
 
                     } catch (InterruptedException e) {
