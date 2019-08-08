@@ -1,4 +1,4 @@
-package JUC;
+package JUC锁;
 
 import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.locks.Lock;

@@ -1,4 +1,4 @@
-package JUC;
+package JUC锁;
 
 import org.junit.Test;
 

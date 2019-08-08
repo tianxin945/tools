@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
+import java.util.concurrent.CopyOnWriteArrayList;
+
 /**
  * @author:tx
  * @Date:2019/7/18
@@ -38,5 +40,17 @@ public class AtomicIntegerFieldUpdaterTest {
             return !isNull;
         }
         return isNull;
+    }
+    public static void main(String[] args) {
+//        System.out.println(Thread.currentThread().getName());
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println(Thread.currentThread().getName());
+//            }
+//        }).start();
+        CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<Integer>();
+        list.add(1);
+        System.out.println(list);
     }
 }
