@@ -1,5 +1,7 @@
 package JUC原子类的使用.基本类型;
 
+import org.junit.Test;
+
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
@@ -8,7 +10,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * @Description:
  */
 public class AtomicBooleanTest {
-    public static void main(String[] args) {
+    @Test
+    public void fun1() {
         AtomicBoolean atomicBoolean = new AtomicBoolean();
         boolean b = atomicBoolean.compareAndSet(false, true);
         atomicBoolean.lazySet(false);
